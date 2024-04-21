@@ -34,5 +34,5 @@ spec:
         targetRevision: HEAD
         path: servicos/{{ `{{path[0]}}` }}
       destination:
-        server: '{{.server}}'
+        server: '{{ `{{server}}` }}'
         namespace: '{{ `{{path[1]}}` }}'
