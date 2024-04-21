@@ -26,7 +26,7 @@ spec:
           #   exclude: true
   template:
     metadata:
-      name: 'servicos/{{.path.basename}}'
+      name: 'servicos-{{.path.basename}}'
     spec:
       project: default
       source:

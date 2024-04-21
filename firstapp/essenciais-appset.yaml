@@ -14,7 +14,7 @@ spec:
           - path: 'essenciais/*'
   template:
     metadata:
-      name: 'essenciais/{{.path.basename}}'
+      name: 'essenciais-{{.path.basename}}'
     spec:
       project: default
       source:
