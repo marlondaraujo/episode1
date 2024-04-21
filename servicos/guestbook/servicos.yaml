@@ -19,7 +19,7 @@ spec:
         repoURL: https://github.com/marlondaraujo/episode1
         revision: HEAD
         directories:
-          - path: 'servicos/**/*'
+          - path: 'servicos/*'
           # - path: '**/_exclude/*'
           #   exclude: true
           # - path: 'root'
