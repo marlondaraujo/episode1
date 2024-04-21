@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
-  name: essenciais 
+  name: essenciais-appset
   namespace: argocd
 spec:
   goTemplate: true
@@ -11,7 +11,7 @@ spec:
         repoURL: https://github.com/marlondaraujo/episode1
         revision: HEAD
         directories:
-          - path: 'essenciais/*'
+          - path: '10-workloads/essenciais/*'
   template:
     metadata:
       name: 'essenciais-{{.path.basename}}'

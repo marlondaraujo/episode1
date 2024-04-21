@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
-  name: servicos
+  name: servicos-appset
   namespace: argocd
 spec:
   goTemplate: true
@@ -19,7 +19,7 @@ spec:
         repoURL: https://github.com/marlondaraujo/episode1
         revision: HEAD
         directories:
-          - path: 'servicos/*'
+          - path: '10-workloads/servicos/*'
           # - path: '**/_exclude/*'
           #   exclude: true
           # - path: 'root'
