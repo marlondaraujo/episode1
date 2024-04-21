@@ -32,7 +32,7 @@ spec:
       source:
         repoURL: https://github.com/marlondaraujo/episode1
         targetRevision: HEAD
-        path: servicos/**/*
+        path: servicos/{{path[0]}}
       destination:
         server: '{{.server}}'
         namespace: '{{path[1]}}'
