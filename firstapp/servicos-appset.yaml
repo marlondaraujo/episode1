@@ -39,6 +39,9 @@ spec:
       syncPolicy:
         syncOptions:
           - CreateNamespace=true
+        automated:
+          prune: true
+          selfHeal: true
 # apiVersion: argoproj.io/v1alpha1
 # kind: ApplicationSet
 # metadata:
