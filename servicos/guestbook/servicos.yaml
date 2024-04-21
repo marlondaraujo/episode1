@@ -26,13 +26,13 @@ spec:
           #   exclude: true
   template:
     metadata:
-      name: '{{path[0]}}-app'
+      name: '{{ `{{path[0]}}` }}-app'
     spec:
       project: default
       source:
         repoURL: https://github.com/marlondaraujo/episode1
         targetRevision: HEAD
-        path: servicos/{{path[0]}}
+        path: servicos/{{ `{{path[0]}}` }}
       destination:
         server: '{{.server}}'
-        namespace: '{{path[1]}}'
+        namespace: '{{ `{{path[1]}}` }}'
