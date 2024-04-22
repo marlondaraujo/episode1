@@ -11,7 +11,7 @@ spec:
         repoURL: https://github.com/marlondaraujo/episode1
         revision: HEAD
         directories:
-          - path: '10-workloads/essenciais/*'
+          - path: '20-workloads/essenciais/*'
   template:
     metadata:
       name: 'essenciais-{{.path.basename}}'
@@ -23,7 +23,7 @@ spec:
         path: '{{.path.path}}'
       destination:
         server: https://kubernetes.default.svc
-        namespace: '{{.path.basename}}'
+        namespace: '{{.path.basename}}-apps'
       syncPolicy:
         syncOptions:
           - CreateNamespace=true

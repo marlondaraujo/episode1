@@ -1,0 +1,24 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: appsets-starter
+  namespace: argocd
+spec:
+  destination:
+    name: ''
+    namespace: appsets-starter
+    server: 'https://kubernetes.default.svc'
+  source:
+    repoURL: 'https://github.com/marlondaraujo/episode1'
+    path: '10-appsets'
+    targetRevision: HEAD
+    directory:
+      recurse: true
+  sources: []
+  project: default
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
+    automated:
+      prune: true
+      selfHeal: true
